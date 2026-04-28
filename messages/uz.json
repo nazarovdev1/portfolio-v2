@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "title": "Akbar Mamanazarov | Fullstack JavaScript Dasturchi",
+    "description": "Fullstack JavaScript/TypeScript dasturchi portfoliyosi — React, Node.js, Express.js"
+  },
+  "navbar": {
+    "brand": "AKBAR",
+    "links": {
+      "home": "Bosh sahifa",
+      "about": "Men haqimda",
+      "skills": "Ko'nikmalar",
+      "experience": "Tajriba",
+      "projects": "Loyihalar",
+      "contact": "Aloqa"
+    },
+    "downloadCv": "CV Yuklab Olish"
+  },
+  "hero": {
+    "badges": ["Fullstack Dasturchi", "TypeScript Mutaxassisi", "AI bilan Rivojlanish"],
+    "greeting": "Salom, men",
+    "name": "Akbar Mamanazarov",
+    "title": "Fullstack JavaScript Dasturchi",
+    "description": "React, Node.js, Express.js va TypeScript yordamida keng ko'lamli, yuqori samarali veb-ilovalar yarataman. Ish jarayoniga AI vositalarini integratsiya qilib, samaradorlikni oshiraman.",
+    "highlights": [
+      "Tez o'rganaman — yangi texnologiyalarni va freymworklarni oson o'zlashtiraman",
+      "Jamoa o'yinchisiman — mukammal hamkorlik va aloqa ko'nikmalari",
+      "AI yordamida rivojlanish — AI vositalaridan foydalangan holda samaradorlikni oshiraman",
+      "Toza kod tarafdoriman — eng yaxshi amaliyotlar va standartlarga amal qilaman"
+    ],
+    "cta": {
+      "projects": "Loyihalarim",
+      "cv": "CV Yuklab Olish",
+      "contact": "Bog'lanish"
+    }
+  },
+  "about": {
+    "heading": "Men",
+    "headingAccent": "haqimda",
+    "bio": "Men zamonaviy, keng ko'lamli veb-ilovalar yaratishga ixtisoslashgan ishtiyoqli Fullstack JavaScript/TypeScript dasturchiman. React.js, Next.js, Node.js va Express.js bo'yicha tajribaga egaman — farq qiladigan raqamli yechimlar yarataman.\n\nMeni boshqalardan ajratib turadigan narsa — ChatGPT va GitHub Copilot kabi AI vositalaridan rivojlanish jarayonini yaxshilash uchun foydalanish qobiliyati. Bu sifatni pasaytirmasdan tezkor natijalarga olib keladi. Men murakkab muammolarni yechishdan va yangi texnologiyalarni o'zlashtirishdan zavqlanaman.\n\nJamoa ishining kuchiga ishonaman — samarali aloqa qilaman, har qanday jamoa dinamikasiga oson moslashaman va har bir loyihaga ijobiy, hamkorlik kayfiyatini olib kelaman.",
+    "tagline": "Kod, AI va Innovatsiyalar bilan kelajakni quraman",
+    "stats": {
+      "experience": { "value": "3+", "label": "Yillik tajriba" },
+      "projects": { "value": "20+", "label": "Loyihalar bajarilgan" },
+      "technologies": { "value": "15+", "label": "Texnologiyalar" },
+      "clients": { "value": "10+", "label": "Mamnun mijozlar" }
+    }
+  },
+  "skills": {
+    "heading": "Mening",
+    "headingAccent": "Ko'nikmalarim",
+    "subtitle": "Bilan ishlaydigan texnologiyalar va vositalar",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend va Ma'lumotlar bazasi",
+      "devops": "DevOps va Vositalar",
+      "ai": "AI va Samaradorlik"
+    }
+  },
+  "experience": {
+    "heading": "Ish",
+    "headingAccent": "tajribam",
+    "subtitle": "Mening professional yo'lim",
+    "items": [
+      {
+        "role": "Fullstack JavaScript Dasturchi",
+        "company": "Frilans",
+        "period": "2023 — Hozirgi kungacha",
+        "description": "React, Next.js, Node.js va Express.js yordamida fullstack veb-ilovalar yaratish. AI vositalarini rivojlanishni tezlashtirish uchun integratsiya qilish."
+      },
+      {
+        "role": "Frontend Dasturchi",
+        "company": "Masofaviy loyihalar",
+        "period": "2022 — 2023",
+        "description": "React.js va TypeScript yordamida moslashuvchan foydalanuvchi interfeyslar yaratish. Ko'p funksiyali jamoalar bilan hamkorlik."
+      },
+      {
+        "role": "Veb-dasturchi Stajyor",
+        "company": "Texnologik startap",
+        "period": "2021 — 2022",
+        "description": "Professional yo'lni JavaScript, React va Node.js o'rganishdan boshlash. Ichki vositalar yaratish va mijozlar loyihalariga hissa qo'shish."
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Mening",
+    "headingAccent": "Loyihalarim",
+    "subtitle": "Faxrlanadigan so'nggi ishlarim",
+    "viewProject": "Demo",
+    "viewCode": "Manba kodi",
+    "items": [
+      {
+        "title": "E-Commerce Platformasi",
+        "description": "Mahsulot boshqaruvi, savat, to'lov integratsiyasi va admin paneli bilan fullstack elektron tijorat ilovasi.",
+        "tags": ["Next.js", "Node.js", "PostgreSQL", "Stripe"]
+      },
+      {
+        "title": "Vazifalar Boshqaruvi Ilovasi",
+        "description": "Real-time hamkorlikdagi vazifalar boshqaruvi ilovasi — drag-and-drop interfeys, ish maydonlari va bildirishnomalar.",
+        "tags": ["React", "Express.js", "MongoDB", "Socket.io"]
+      },
+      {
+        "title": "AI Chat Ilovasi",
+        "description": "OpenAI API asosida aqlli chat ilovasi — suhbat tarixi, bir nechta modellar va eksport funksiyasi.",
+        "tags": ["Next.js", "TypeScript", "OpenAI API", "Tailwind"]
+      },
+      {
+        "title": "Portfolio Sayti",
+        "description": "Mana shu portfolio — Next.js da yaratilgan zamonaviy, moslashuvchan sayt, 3D animatsiyalar va xalqaro til qo'llab-quvvatlash bilan.",
+        "tags": ["Next.js", "Three.js", "Framer Motion", "Tailwind"]
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Odamlar",
+    "headingAccent": "nima deydi",
+    "subtitle": "Hamkasblar va mijozlardan fikrlar",
+    "items": [
+      {
+        "quote": "Akbar yuqori sifatli ishni doimo yetkazib beradigan ajoyib dasturchi. Yangi texnologiyalarni tez o'rganish qobiliyati haqiqatan ham ta'sirli.",
+        "name": "Jamoa rahbari",
+        "role": "Dasturiy ta'minotni ishlab chiqish"
+      },
+      {
+        "quote": "Akbar bilan ishlash ajoyib tajriba bo'ldi. U samarali aloqa qiladi, muddatlarga rioya qiladi va har doim kutganidan ortiq natija beradi.",
+        "name": "Loyiha menejeri",
+        "role": "Texnologik kompaniya"
+      },
+      {
+        "quote": "Muammolarni hal qilish ko'nikmalari va e'tibor Akbarni ajratib turadi. U faqat dasturchi emas — haqiqiy jamoa o'yinchisi.",
+        "name": "Katta dasturchi",
+        "role": "Startap jamoasi"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Bog'lan",
+    "headingAccent": "ing",
+    "subtitle": "Loyihangiz bormi? Birga ishlaylik!",
+    "form": {
+      "name": "Ismingiz",
+      "email": "Email manzilingiz",
+      "subject": "Mavzu",
+      "message": "Xabaringiz",
+      "send": "Xabar Yuborish",
+      "sending": "Yuborilmoqda...",
+      "success": "Xabar muvaffaqiyatli yuborildi!",
+      "error": "Xabar yuborilmadi. Qayta urinib ko'ring."
+    },
+    "info": {
+      "email": "Email",
+      "location": "Manzil",
+      "availability": "Frilans uchun mavjud",
+      "emailValue": "akbar@example.com",
+      "locationValue": "O'zbekiston"
+    }
+  },
+  "footer": {
+    "description": "Zamonaviy, keng ko'lamli veb-ilovalarni ishtiyoq va aniqlik bilan yaratuvchi Fullstack JavaScript/TypeScript dasturchi.",
+    "quickLinks": "Tezkor havolalar",
+    "connect": "Bog'lanish",
+    "builtWith": "Yaratilgan texnologiyalar:",
+    "copyright": "© 2026 Akbar Mamanazarov. Barcha huquqlar himoyalangan."
+  }
+}

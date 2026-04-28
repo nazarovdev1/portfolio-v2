@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "title": "Akbar Mamanazarov | Fullstack JavaScript Developer",
+    "description": "Fullstack JavaScript/TypeScript Developer Portfolio — React, Node.js, Express.js"
+  },
+  "navbar": {
+    "brand": "AKBAR",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "downloadCv": "Download CV"
+  },
+  "hero": {
+    "badges": ["Fullstack Developer", "TypeScript Expert", "AI-Powered Development"],
+    "greeting": "Hi, I'm",
+    "name": "Akbar Mamanazarov",
+    "title": "Fullstack JavaScript Developer",
+    "description": "I build scalable, performant web applications using React, Node.js, Express.js, and TypeScript. I integrate AI tools into my workflow to maximize efficiency and deliver high-quality solutions faster.",
+    "highlights": [
+      "Quick learner — rapidly adapt to new technologies and frameworks",
+      "Team player — excellent collaboration and communication skills",
+      "AI-assisted development — leveraging AI to boost productivity",
+      "Clean code advocate — following best practices and coding standards"
+    ],
+    "cta": {
+      "projects": "View Projects",
+      "cv": "Download CV",
+      "contact": "Contact Me"
+    }
+  },
+  "about": {
+    "heading": "About",
+    "headingAccent": "Me",
+    "bio": "I'm a passionate Fullstack JavaScript/TypeScript developer specializing in building modern, scalable web applications. With expertise in React.js, Next.js, Node.js, and Express.js, I create seamless digital experiences that make a difference.\n\nWhat sets me apart is my ability to leverage AI tools like ChatGPT and GitHub Copilot to enhance my development workflow, resulting in faster delivery without compromising quality. I'm a quick learner who thrives on solving complex problems and mastering new technologies.\n\nI believe in the power of teamwork — I communicate effectively, adapt easily to any team dynamic, and bring a positive, collaborative energy to every project. Whether it's building from scratch or improving existing systems, I'm always ready for the next challenge.",
+    "tagline": "Building the Future with Code, AI & Innovation",
+    "stats": {
+      "experience": { "value": "3+", "label": "Years Experience" },
+      "projects": { "value": "20+", "label": "Projects Completed" },
+      "technologies": { "value": "15+", "label": "Technologies" },
+      "clients": { "value": "10+", "label": "Happy Clients" }
+    }
+  },
+  "skills": {
+    "heading": "My",
+    "headingAccent": "Skills",
+    "subtitle": "Technologies and tools I work with",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend & Database",
+      "devops": "DevOps & Tools",
+      "ai": "AI & Productivity"
+    }
+  },
+  "experience": {
+    "heading": "Work",
+    "headingAccent": "Experience",
+    "subtitle": "My professional journey",
+    "items": [
+      {
+        "role": "Fullstack JavaScript Developer",
+        "company": "Freelance",
+        "period": "2023 — Present",
+        "description": "Building fullstack web applications using React, Next.js, Node.js, and Express.js. Integrating AI tools to accelerate development and improve code quality."
+      },
+      {
+        "role": "Frontend Developer",
+        "company": "Remote Projects",
+        "period": "2022 — 2023",
+        "description": "Developed responsive user interfaces with React.js and TypeScript. Collaborated with cross-functional teams to deliver pixel-perfect designs."
+      },
+      {
+        "role": "Web Developer Intern",
+        "company": "Tech Startup",
+        "period": "2021 — 2022",
+        "description": "Started my professional journey learning JavaScript, React, and Node.js. Built several internal tools and contributed to client projects."
+      }
+    ]
+  },
+  "projects": {
+    "heading": "My",
+    "headingAccent": "Projects",
+    "subtitle": "Recent work I'm proud of",
+    "viewProject": "Live Demo",
+    "viewCode": "Source Code",
+    "items": [
+      {
+        "title": "E-Commerce Platform",
+        "description": "A fullstack e-commerce application with product management, shopping cart, payment integration, and admin dashboard. Built with Next.js, Node.js, and PostgreSQL.",
+        "tags": ["Next.js", "Node.js", "PostgreSQL", "Stripe"]
+      },
+      {
+        "title": "Task Management App",
+        "description": "Real-time collaborative task management application with drag-and-drop interface, team workspaces, and notification system.",
+        "tags": ["React", "Express.js", "MongoDB", "Socket.io"]
+      },
+      {
+        "title": "AI Chat Application",
+        "description": "An intelligent chat application powered by OpenAI API with conversation history, multiple models support, and export functionality.",
+        "tags": ["Next.js", "TypeScript", "OpenAI API", "Tailwind"]
+      },
+      {
+        "title": "Portfolio Website",
+        "description": "This very portfolio — a modern, responsive website built with Next.js, featuring 3D animations, internationalization, and a professional design.",
+        "tags": ["Next.js", "Three.js", "Framer Motion", "Tailwind"]
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "What People",
+    "headingAccent": "Say",
+    "subtitle": "Feedback from colleagues and clients",
+    "items": [
+      {
+        "quote": "Akbar is an exceptional developer who consistently delivers high-quality work. His ability to quickly learn new technologies and adapt to project requirements is impressive.",
+        "name": "Team Lead",
+        "role": "Software Development"
+      },
+      {
+        "quote": "Working with Akbar was a great experience. He communicates effectively, meets deadlines, and always goes above and beyond to deliver outstanding results.",
+        "name": "Project Manager",
+        "role": "Tech Company"
+      },
+      {
+        "quote": "Akbar's problem-solving skills and attention to detail make him stand out. He's not just a developer — he's a true team player who elevates everyone around him.",
+        "name": "Senior Developer",
+        "role": "Startup Team"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Get In",
+    "headingAccent": "Touch",
+    "subtitle": "Have a project in mind? Let's work together!",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "info": {
+      "email": "Email",
+      "location": "Location",
+      "availability": "Available for freelance",
+      "emailValue": "akbar@example.com",
+      "locationValue": "Uzbekistan"
+    }
+  },
+  "footer": {
+    "description": "Fullstack JavaScript/TypeScript Developer building modern, scalable web applications with passion and precision.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "builtWith": "Built with",
+    "copyright": "© 2026 Akbar Mamanazarov. All rights reserved."
+  }
+}
