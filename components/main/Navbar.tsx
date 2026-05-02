@@ -181,7 +181,7 @@ export default function Navbar() {
               </div>
 
               <a
-                href="/cv.pdf"
+                href="/Акбар_Маманазаров_CV_.docx"
                 download
                 className="hidden md:flex items-center gap-2 btn-outline text-sm !py-1.5 !px-3"
               >
@@ -191,7 +191,7 @@ export default function Navbar() {
 
               <div className="hidden md:flex items-center gap-2">
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/nazarovdev1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/[0.08] transition-all"
@@ -199,7 +199,7 @@ export default function Navbar() {
                   <FaGithub className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/"
+                  href="https://linkedin.com/in/akbar-nazarov-1a39ab406"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/[0.08] transition-all"
@@ -207,7 +207,7 @@ export default function Navbar() {
                   <FaLinkedinIn className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://t.me/"
+                  href="https://t.me/nazarov_49"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/[0.08] transition-all"
@@ -279,7 +279,7 @@ export default function Navbar() {
 
               <div className="mt-8 pt-6 border-t border-white/[0.06]">
                 <a
-                  href="/cv.pdf"
+                  href="/Акбар_Маманазаров_CV_.docx"
                   download
                   className="flex items-center justify-center gap-2 btn-primary text-sm w-full"
                 >
@@ -290,7 +290,7 @@ export default function Navbar() {
 
               <div className="flex items-center justify-center gap-3 mt-6">
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/nazarovdev1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/[0.08] transition-all"
@@ -298,7 +298,7 @@ export default function Navbar() {
                   <FaGithub className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/"
+                  href="https://linkedin.com/in/akbar-nazarov-1a39ab406"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/[0.08] transition-all"
@@ -306,7 +306,7 @@ export default function Navbar() {
                   <FaLinkedinIn className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://t.me/"
+                  href="https://t.me/nazarov_49"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/[0.08] transition-all"

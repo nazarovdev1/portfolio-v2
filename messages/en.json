@@ -16,7 +16,7 @@
     "downloadCv": "Download CV"
   },
   "hero": {
-    "badges": ["Fullstack Developer", "TypeScript Expert", "AI-Powered Development"],
+    "badges": ["Fullstack Developer", "TypeScript", "AI-Powered Development"],
     "greeting": "Hi, I'm",
     "name": "Akbar Mamanazarov",
     "title": "Fullstack JavaScript Developer",
@@ -89,9 +89,9 @@
     "viewCode": "Source Code",
     "items": [
       {
-        "title": "E-Commerce Platform",
-        "description": "A fullstack e-commerce application with product management, shopping cart, payment integration, and admin dashboard. Built with Next.js, Node.js, and PostgreSQL.",
-        "tags": ["Next.js", "Node.js", "PostgreSQL", "Stripe"]
+        "title": "Women's online clothing store",
+        "description": "An online store for women's clothing with catalog browsing, filters, cart, and checkout flow. E-commerce platform built for luxx.uz.",
+        "tags": ["React", "E-commerce", "UI/UX", "Responsive"]
       },
       {
         "title": "Task Management App",

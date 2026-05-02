@@ -31,7 +31,7 @@ const StarBackground = (props: any) => {
           color="#fff"
           size={0.0015}
           sizeAttenuation={true}
-          dethWrite={false}
+          depthWrite={false}
         />
       </Points>
     </group>
@@ -40,7 +40,7 @@ const StarBackground = (props: any) => {
 
 const StarsCanvas = () => (
   <div className="w-full h-auto fixed inset-0 z-[1] pointer-events-none">
-    <Canvas camera={{ position: [0, 0, 1] }}>
+    <Canvas camera={{ position: [0, 0, 1] }} style={{ pointerEvents: 'none' }}>
       <Suspense fallback={null}>
         <StarBackground />
       </Suspense>

@@ -59,7 +59,7 @@ const About = () => {
                     <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-accent-indigo/30 p-1">
                       <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-accent-indigo/20 to-accent-blue/20">
                         <Image
-                          src="/jenin.jpg"
+                          src="/myPhoto.jpg"
                           alt="Akbar Mamanazarov"
                           width={250}
                           height={250}

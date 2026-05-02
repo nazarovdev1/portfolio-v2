@@ -7,6 +7,10 @@ import Projects from "@/components/main/Projects";
 import Testimonials from "@/components/main/Testimonials";
 import Contact from "@/components/main/Contact";
 
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "ru" }, { locale: "uz" }];
+}
+
 export default function Home({ params }: { params: { locale: string } }) {
   setRequestLocale(params.locale);
 

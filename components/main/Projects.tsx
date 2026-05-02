@@ -14,23 +14,50 @@ const Projects = () => {
   const t = useTranslations("projects");
   const [filter, setFilter] = useState("All");
 
-  const items = [0, 1, 2, 3].map((i) => ({
-    title: t(`items.${i}.title`),
-    description: t(`items.${i}.description`),
-    tags: [t(`items.${i}.tags.0`), t(`items.${i}.tags.1`), t(`items.${i}.tags.2`), t(`items.${i}.tags.3`)],
-  }));
+  const projects = [0, 1, 2, 3].map((i) => {
+    const tags = [
+      t(`items.${i}.tags.0`),
+      t(`items.${i}.tags.1`),
+      t(`items.${i}.tags.2`),
+      t(`items.${i}.tags.3`),
+    ];
+
+    const imageByIndex = [
+      "/luxx.png",
+      "/CardImage.png",
+      "/NextWebsite.png",
+      "/SpaceWebsite.png",
+    ];
+
+    const liveUrlByIndex = [
+      "https://luxx.uz",
+      "#",
+      "#",
+      "#",
+    ];
+
+    const codeUrlByIndex = [
+      "#",
+      "#",
+      "#",
+      "#",
+    ];
+
+    return {
+      index: i,
+      title: t(`items.${i}.title`),
+      description: t(`items.${i}.description`),
+      tags,
+      image: imageByIndex[i],
+      liveUrl: liveUrlByIndex[i],
+      codeUrl: codeUrlByIndex[i],
+    };
+  });
 
   const filtered =
     filter === "All"
-      ? items
-      : items.filter((item) => item.tags.includes(filter));
-
-  const projectImages = [
-    "/NextWebsite.png",
-    "/CardImage.png",
-    "/SpaceWebsite.png",
-    "/SpaceWebsite.png",
-  ];
+      ? projects
+      : projects.filter((item) => item.tags.includes(filter));
 
   return (
     <section id="projects" className="section-padding relative">
@@ -83,29 +110,50 @@ const Projects = () => {
               >
                 {filtered.map((project, i) => (
                   <motion.div
-                    key={project.title}
+                    key={`${project.index}-${project.title}`}
                     variants={staggerItem}
-                    className="glass-card overflow-hidden group"
+                    className="glass-card overflow-hidden group cursor-pointer"
+                    onClick={() => {
+                      if (project.liveUrl && project.liveUrl !== "#") {
+                        window.open(project.liveUrl, "_blank", "noopener,noreferrer");
+                      }
+                    }}
                   >
                     <div className="relative h-48 overflow-hidden bg-dark-200">
                       <Image
-                        src={projectImages[i]}
+                        src={project.image}
                         alt={project.title}
                         width={600}
                         height={400}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-60" />
+                      {/* Hover overlay with Visit Site button */}
+                      {project.liveUrl && project.liveUrl !== "#" && (
+                        <div className="absolute inset-0 bg-dark/70 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <span className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-accent-indigo to-accent-blue text-white text-sm font-semibold flex items-center gap-2 shadow-lg shadow-accent-indigo/25 hover:shadow-accent-indigo/40 transition-shadow duration-300">
+                            <HiOutlineExternalLink className="w-4 h-4" />
+                            Visit Site →
+                          </span>
+                        </div>
+                      )}
+                      {/* Top-right icon links */}
                       <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <a
-                          href="#"
+                          href={project.liveUrl || "#"}
+                          target={project.liveUrl && project.liveUrl !== "#" ? "_blank" : undefined}
+                          rel={project.liveUrl && project.liveUrl !== "#" ? "noopener noreferrer" : undefined}
                           className="w-8 h-8 rounded-lg glass-strong flex items-center justify-center text-white hover:bg-accent-indigo/30 transition-colors"
+                          onClick={(e) => e.stopPropagation()}
                         >
                           <HiOutlineExternalLink className="w-4 h-4" />
                         </a>
                         <a
-                          href="#"
+                          href={project.codeUrl || "#"}
+                          target={project.codeUrl && project.codeUrl !== "#" ? "_blank" : undefined}
+                          rel={project.codeUrl && project.codeUrl !== "#" ? "noopener noreferrer" : undefined}
                           className="w-8 h-8 rounded-lg glass-strong flex items-center justify-center text-white hover:bg-accent-indigo/30 transition-colors"
+                          onClick={(e) => e.stopPropagation()}
                         >
                           <HiOutlineCode className="w-4 h-4" />
                         </a>

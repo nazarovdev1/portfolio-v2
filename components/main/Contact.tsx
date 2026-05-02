@@ -62,9 +62,9 @@ const Contact = () => {
   ];
 
   const socials = [
-    { icon: <FaGithub className="w-5 h-5" />, href: "https://github.com/", label: "GitHub" },
-    { icon: <FaLinkedinIn className="w-5 h-5" />, href: "https://linkedin.com/in/", label: "LinkedIn" },
-    { icon: <FaTelegramPlane className="w-5 h-5" />, href: "https://t.me/", label: "Telegram" },
+    { icon: <FaGithub className="w-5 h-5" />, href: "https://github.com/nazarovdev1", label: "GitHub" },
+    { icon: <FaLinkedinIn className="w-5 h-5" />, href: "https://linkedin.com/in/akbar-nazarov-1a39ab406", label: "LinkedIn" },
+    { icon: <FaTelegramPlane className="w-5 h-5" />, href: "https://t.me/nazarov_49", label: "Telegram" },
   ];
 
   return (

@@ -3,11 +3,16 @@ import { setRequestLocale } from "next-intl/server";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../globals.css";
-import StarsCanvas from "@/components/main/StarBackground";
+import dynamic from "next/dynamic";
+const StarsCanvas = dynamic(() => import("@/components/main/StarBackground"), { ssr: false });
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 
 const locales = ["en", "ru", "uz"];
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -57,7 +62,7 @@ export default async function LocaleLayout({
           <StarsCanvas />
           <ScrollProgress />
           <Navbar />
-          <main>{children}</main>
+          <main className="relative z-10">{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>

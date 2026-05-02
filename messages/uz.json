@@ -36,7 +36,7 @@
   "about": {
     "heading": "Men",
     "headingAccent": "haqimda",
-    "bio": "Men zamonaviy, keng ko'lamli veb-ilovalar yaratishga ixtisoslashgan ishtiyoqli Fullstack JavaScript/TypeScript dasturchiman. React.js, Next.js, Node.js va Express.js bo'yicha tajribaga egaman — farq qiladigan raqamli yechimlar yarataman.\n\nMeni boshqalardan ajratib turadigan narsa — ChatGPT va GitHub Copilot kabi AI vositalaridan rivojlanish jarayonini yaxshilash uchun foydalanish qobiliyati. Bu sifatni pasaytirmasdan tezkor natijalarga olib keladi. Men murakkab muammolarni yechishdan va yangi texnologiyalarni o'zlashtirishdan zavqlanaman.\n\nJamoa ishining kuchiga ishonaman — samarali aloqa qilaman, har qanday jamoa dinamikasiga oson moslashaman va har bir loyihaga ijobiy, hamkorlik kayfiyatini olib kelaman.",
+    "bio": "Men zamonaviy, keng ko'lamli veb-ilovalar yaratishga ixtisoslashgan ishtiyoqli Fullstack JavaScript/TypeScript dasturchiman. React.js, Next.js, Node.js va Express.js bo'yicha tajribaga egaman — farq qiladigan raqamli yechimlar yarataman.\n\nMeni boshqalardan ajratib turadigan narsa — ChatGPT, Claude, Gemini va Copilot kabi AI vositalaridan rivojlanish jarayonini yaxshilash uchun foydalanish qobiliyati. Bu sifatni pasaytirmasdan tezkor natijalarga olib keladi. Men murakkab muammolarni yechishdan va yangi texnologiyalarni o'zlashtirishdan zavqlanaman.\n\nJamoa ishining kuchiga ishonaman — samarali aloqa qilaman, har qanday jamoa dinamikasiga oson moslashaman va har bir loyihaga ijobiy, hamkorlik kayfiyatini olib kelaman.",
     "tagline": "Kod, AI va Innovatsiyalar bilan kelajakni quraman",
     "stats": {
       "experience": { "value": "3+", "label": "Yillik tajriba" },
@@ -64,19 +64,19 @@
       {
         "role": "Fullstack JavaScript Dasturchi",
         "company": "Frilans",
-        "period": "2023 — Hozirgi kungacha",
+        "period": "2025 — Hozirgi kungacha",
         "description": "React, Next.js, Node.js va Express.js yordamida fullstack veb-ilovalar yaratish. AI vositalarini rivojlanishni tezlashtirish uchun integratsiya qilish."
       },
       {
         "role": "Frontend Dasturchi",
         "company": "Masofaviy loyihalar",
-        "period": "2022 — 2023",
+        "period": "2024",
         "description": "React.js va TypeScript yordamida moslashuvchan foydalanuvchi interfeyslar yaratish. Ko'p funksiyali jamoalar bilan hamkorlik."
       },
       {
         "role": "Veb-dasturchi Stajyor",
         "company": "Texnologik startap",
-        "period": "2021 — 2022",
+        "period": "2023",
         "description": "Professional yo'lni JavaScript, React va Node.js o'rganishdan boshlash. Ichki vositalar yaratish va mijozlar loyihalariga hissa qo'shish."
       }
     ]
@@ -89,9 +89,9 @@
     "viewCode": "Manba kodi",
     "items": [
       {
-        "title": "E-Commerce Platformasi",
-        "description": "Mahsulot boshqaruvi, savat, to'lov integratsiyasi va admin paneli bilan fullstack elektron tijorat ilovasi.",
-        "tags": ["Next.js", "Node.js", "PostgreSQL", "Stripe"]
+        "title": "Ayollar online kiyim do'koni",
+        "description": "Ayollar kiyim-kechaklari uchun online do'kon — katalog, filtrlash, savat va buyurtma berish jarayonlari bilan. luxx.uz uchun tayyorlangan e-commerce platforma.",
+        "tags": ["React", "E-commerce", "UI/UX", "Responsive"]
       },
       {
         "title": "Vazifalar Boshqaruvi Ilovasi",

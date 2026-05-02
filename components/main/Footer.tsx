@@ -35,14 +35,14 @@ export default function Footer() {
               <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-accent-indigo to-accent-blue flex items-center justify-center font-bold text-white text-sm">
                 A
               </div>
-              <span className="font-bold text-lg text-white">AKBAR</span>
+              <span className="font-bold text-lg text-white">AKBAR MAMANAZAROV</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
               {t("description")}
             </p>
             <div className="flex items-center gap-3 mt-4 justify-center md:justify-start">
               <a
-                href="https://github.com/"
+                href="https://t.me/nazarov_49"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/[0.04] flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent-indigo/20 transition-all"
@@ -50,7 +50,7 @@ export default function Footer() {
                 <FaGithub className="w-4 h-4" />
               </a>
               <a
-                href="https://linkedin.com/in/"
+                href="https://linkedin.com/in/akbar-nazarov-1a39ab406"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/[0.04] flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent-indigo/20 transition-all"
@@ -58,7 +58,7 @@ export default function Footer() {
                 <FaLinkedinIn className="w-4 h-4" />
               </a>
               <a
-                href="https://t.me/"
+                href="https://t.me/nazarov_49"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/[0.04] flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent-indigo/20 transition-all"

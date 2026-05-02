@@ -108,7 +108,7 @@ const HeroContent = () => {
               {t("cta.projects")}
             </a>
             <a
-              href="/cv.pdf"
+              href="/Акбар_Маманазаров_CV_.docx"
               download
               className="btn-outline flex items-center gap-2 text-sm"
             >
@@ -137,15 +137,15 @@ const HeroContent = () => {
             {[
               {
                 icon: <FaGithub className="w-5 h-5" />,
-                href: "https://github.com/",
+                href: "https://github.com/nazarovdev1",
               },
               {
                 icon: <FaLinkedinIn className="w-5 h-5" />,
-                href: "https://linkedin.com/in/",
+                href: "https://linkedin.com/in/akbar-nazarov-1a39ab406",
               },
               {
                 icon: <FaTelegramPlane className="w-5 h-5" />,
-                href: "https://t.me/",
+                href: "https://t.me/nazarov_49",
               },
             ].map((social, i) => (
               <a
