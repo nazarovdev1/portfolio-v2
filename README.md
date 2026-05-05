@@ -1,37 +1,55 @@
-# portfolio-v2
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Akbar Mamanazarov | Fullstack JavaScript Developer
 
-## Getting Started
+![Portfolio Banner](C:/Users/Root/.gemini/antigravity/brain/2307f7ef-9a3d-40c3-b9d8-3322fc6be63d/portfolio_banner_1777984235080.png)
 
-First, run the development server:
+> **Engineering with Precision. Shipping with Confidence.**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I am a Fullstack JavaScript/TypeScript developer who architects digital products that scale, perform, and leave a lasting impression. With deep expertise in **React.js, Next.js, Node.js, and Express.js**, I turn complex ideas into clean, production-ready solutions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🛠️ Core Stack & Expertise
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Category | Technologies |
+| :--- | :--- |
+| **Frontend** | React, Next.js, TypeScript, Tailwind CSS, Framer Motion |
+| **Backend** | Node.js, Express.js, Socket.io |
+| **Database** | PostgreSQL, MongoDB |
+| **Tools & AI** | AI Agentic Coding, Vibe Coding, Professional Prompt Engineering |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### 🌟 Featured Projects
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### 👗 Women's Online Clothing Store (Luxx.uz)
+A high-performance e-commerce platform featuring catalog browsing, advanced filtering, and a seamless checkout flow.
+- **Tech:** React, Tailwind CSS, UI/UX Optimization.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### 🏥 Clinic Management System
+A comprehensive medical solution for patient records, appointment scheduling, and staff management.
+- **Tech:** React, TypeScript, Tailwind CSS, PostgreSQL.
 
-## Deploy on Vercel
+#### 📝 Task Management App
+Real-time collaborative workspace with drag-and-drop task management and team notifications.
+- **Tech:** React, Express.js, MongoDB, Socket.io.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 💬 What Mentors & Clients Say
+
+> "Every time I gave Akbar a project, he completed it flawlessly — not a single flaw. This is exactly what set him apart from other strong students. His professional work always amazed me."
+> — **Umar Adkhamov**, *Mentor & Programming Instructor*
+
+> "This is my second time working with this developer — I can confirm the service is absolutely top-tier! Professionalism and skills are TOP! Always available, very responsive… Highly recommend!"
+> — **Lamber APP**, *Client via Kwork*
+
+---
+
+### 📬 Connect with Me
+
+- 📧 **Email:** [akbarnazarov109@gmail.com](mailto:akbarnazarov109@gmail.com)
+- 📍 **Location:** Tashkent, Uzbekistan
+- ⚡ **Availability:** Available for high-impact freelance projects and collaborations.
+
+---
+*© 2026 Akbar Mamanazarov. Built with passion and precision.*
