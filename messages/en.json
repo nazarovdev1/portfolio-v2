@@ -36,13 +36,12 @@
   "about": {
     "heading": "About",
     "headingAccent": "Me",
-    "bio": "I'm a passionate Fullstack JavaScript/TypeScript developer specializing in building modern, scalable web applications. With expertise in React.js, Next.js, Node.js, and Express.js, I create seamless digital experiences that make a difference.\n\nWhat sets me apart is my ability to leverage AI tools like ChatGPT and GitHub Copilot to enhance my development workflow, resulting in faster delivery without compromising quality. I'm a quick learner who thrives on solving complex problems and mastering new technologies.\n\nI believe in the power of teamwork — I communicate effectively, adapt easily to any team dynamic, and bring a positive, collaborative energy to every project. Whether it's building from scratch or improving existing systems, I'm always ready for the next challenge.",
-    "tagline": "Building the Future with Code, AI & Innovation",
+    "bio": "I'm a Fullstack JavaScript/TypeScript developer who doesn't just write code — I architect digital products that scale, perform, and leave a lasting impression. With deep expertise in React.js, Next.js, Node.js, and Express.js, I turn complex ideas into clean, production-ready solutions.\n\nI operate at the intersection of engineering precision and creative problem-solving. My edge? I master the art of Vibe Coding and Professional Prompt Engineering — a modern superpower that lets me move at machine speed while maintaining human-level quality. I don't chase trends; I set the pace.\n\nI thrive in high-stakes environments where fast delivery, clean architecture, and attention to detail aren't optional — they're the baseline. Whether solo or leading a team, I bring clarity, ownership, and relentless execution to every project I touch.",
+    "tagline": "Engineering with Precision. Shipping with Confidence.",
     "stats": {
-      "experience": { "value": "2+", "label": "Years Experience" },
-      "projects": { "value": "15+", "label": "Projects Completed" },
+      "projects": { "value": "15+", "label": "Projects Shipped" },
       "technologies": { "value": "10+", "label": "Technologies" },
-      "clients": { "value": "5+", "label": "Happy Clients" }
+      "clients": { "value": "5+", "label": "Satisfied Clients" }
     }
   },
   "skills": {
@@ -116,19 +115,14 @@
     "subtitle": "Feedback from colleagues and clients",
     "items": [
       {
-        "quote": "Akbar is an exceptional developer who consistently delivers high-quality work. His ability to quickly learn new technologies and adapt to project requirements is impressive.",
-        "name": "Team Lead",
-        "role": "Software Development"
+        "quote": "This is my second time working with this developer — I can confirm the service is absolutely top-tier! Professionalism and skills are TOP! Always available, very responsive… Highly recommend!",
+        "name": "Lamber APP",
+        "role": "Client · Kwork Platform"
       },
       {
-        "quote": "Working with Akbar was a great experience. He communicates effectively, meets deadlines, and always goes above and beyond to deliver outstanding results.",
-        "name": "Project Manager",
-        "role": "Tech Company"
-      },
-      {
-        "quote": "Akbar's problem-solving skills and attention to detail make him stand out. He's not just a developer — he's a true team player who elevates everyone around him.",
-        "name": "Senior Developer",
-        "role": "Startup Team"
+        "quote": "Every time I gave Akbar a project, he completed it flawlessly — not a single flaw. This is exactly what set him apart from other strong students. His professional work always amazed me.",
+        "name": "Umar Adkhamov",
+        "role": "Mentor · Programming Instructor"
       }
     ]
   },

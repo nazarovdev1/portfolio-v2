@@ -19,7 +19,6 @@ import {
 } from "react-icons/hi";
 
 const statIcons = [
-  <HiOutlineBriefcase key="briefcase" className="w-6 h-6" />,
   <HiOutlineCode key="code" className="w-6 h-6" />,
   <HiOutlineDeviceMobile key="device" className="w-6 h-6" />,
   <HiOutlineUserGroup key="users" className="w-6 h-6" />,
@@ -29,7 +28,7 @@ const About = () => {
   const t = useTranslations("about");
 
   const bio = t("bio").split("\n\n");
-  const statKeys = ["experience", "projects", "technologies", "clients"] as const;
+  const statKeys = ["projects", "technologies", "clients"] as const;
 
   return (
     <section id="about" className="section-padding relative">
@@ -92,7 +91,7 @@ const About = () => {
 
               <motion.div
                 variants={staggerContainer}
-                className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12 w-full"
+                className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-12 w-full"
               >
                 {statKeys.map((key, i) => (
                   <motion.div

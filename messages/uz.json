@@ -36,11 +36,10 @@
   "about": {
     "heading": "Men",
     "headingAccent": "haqimda",
-    "bio": "Men zamonaviy, keng ko'lamli veb-ilovalar yaratishga ixtisoslashgan ishtiyoqli Fullstack JavaScript/TypeScript dasturchiman. React.js, Next.js, Node.js va Express.js bo'yicha tajribaga egaman — farq qiladigan raqamli yechimlar yarataman.\n\nMeni boshqalardan ajratib turadigan narsa — ChatGPT, Claude, Gemini va Copilot kabi AI vositalaridan rivojlanish jarayonini yaxshilash uchun foydalanish qobiliyati. Bu sifatni pasaytirmasdan tezkor natijalarga olib keladi. Men murakkab muammolarni yechishdan va yangi texnologiyalarni o'zlashtirishdan zavqlanaman.\n\nJamoa ishining kuchiga ishonaman — samarali aloqa qilaman, har qanday jamoa dinamikasiga oson moslashaman va har bir loyihaga ijobiy, hamkorlik kayfiyatini olib kelaman.",
-    "tagline": "Kod, AI va Innovatsiyalar bilan kelajakni quraman",
+    "bio": "Men shunchaki kod yozmayman — kengayuvchan, yuqori samarali va esda qoladigan raqamli mahsulotlar yarataman. React.js, Next.js, Node.js va Express.js bo'yicha chuqur bilimga ega holda, murakkab g'oyalarni toza va ishlab chiqarishga tayyor yechimlarga aylantiraman.\n\nMening ustunligim Vibe Coding va Professional Prompt Engineering san'atini mukammal egallashimda. Bu zamonaviy Texnologik AI Agentlar menga mashina tezligida harakatlanish imkonini berib, inson darajasidagi sifatni saqlab qolishga yordam beradi. Men tendentsiyalarni kuzatmayman balki ularni yarataman.\n\nMen tez yetkazib berish, toza arxitektura va batafsil e'tibor ixtiyoriy emas — balki bazaviy bo'lgan yuqori bosimli muhitlarda ravnaq topaman. Yakkama-yakka yoki jamoada bo'lishidan qat'i nazar, men har bir loyihaga ravshanlik, mas'uliyat va cheksiz ijro olib kelaman.",
+    "tagline": "Aniqlik bilan muhandislik. Ishonch bilan yetkazish.",
     "stats": {
-      "experience": { "value": "2+", "label": "Yillik tajriba" },
-      "projects": { "value": "15+", "label": "Loyihalar bajarilgan" },
+      "projects": { "value": "15+", "label": "Loyihalar bajarildi" },
       "technologies": { "value": "10+", "label": "Texnologiyalar" },
       "clients": { "value": "5+", "label": "Mamnun mijozlar" }
     }
@@ -116,19 +115,14 @@
     "subtitle": "Hamkasblar va mijozlardan fikrlar",
     "items": [
       {
-        "quote": "Akbar yuqori sifatli ishni doimo yetkazib beradigan ajoyib dasturchi. Yangi texnologiyalarni tez o'rganish qobiliyati haqiqatan ham ta'sirli.",
-        "name": "Jamoa rahbari",
-        "role": "Dasturiy ta'minotni ishlab chiqish"
+        "quote": "Bu dasturchi bilan ikkinchi ishim — xizmat ko'rsatish darajasi eng yuqori ekanligini tasdiqlay olaman! Professionallik va ko'nikmalar — TOP! Doim aloqada, juda javobgar… Qat'iy tavsiya qilaman!",
+        "name": "Lamber APP",
+        "role": "Mijoz · Kwork platformasi"
       },
       {
-        "quote": "Akbar bilan ishlash ajoyib tajriba bo'ldi. U samarali aloqa qiladi, muddatlarga rioya qiladi va har doim kutganidan ortiq natija beradi.",
-        "name": "Loyiha menejeri",
-        "role": "Texnologik kompaniya"
-      },
-      {
-        "quote": "Muammolarni hal qilish ko'nikmalari va e'tibor Akbarni ajratib turadi. U faqat dasturchi emas — haqiqiy jamoa o'yinchisi.",
-        "name": "Katta dasturchi",
-        "role": "Startap jamoasi"
+        "quote": "Men Akbarga proyekt berganimda har safar mukammal qilib bajarib kelardi, bitta ham nuqsonsiz — va shunisi bilan boshqa kuchli talabalarimdan ajralib turardi. Bunday professional ishlari bilan doim meni hayron qoldirardi.",
+        "name": "Umar Adxamov",
+        "role": "Ustoz · Dasturlash o'qituvchisi"
       }
     ]
   },

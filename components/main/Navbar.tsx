@@ -41,10 +41,9 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "#home", label: t("links.home") },
-    { href: "#about", label: t("links.about") },
     { href: "#skills", label: t("links.skills") },
-    { href: "#experience", label: t("links.experience") },
     { href: "#projects", label: t("links.projects") },
+    { href: "#about", label: t("links.about") },
     { href: "#contact", label: t("links.contact") },
   ];
 
@@ -52,7 +51,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      const sections = ["home", "about", "skills", "experience", "projects", "contact"];
+      const sections = ["home", "skills", "projects", "about", "contact"];
       for (const section of sections.reverse()) {
         const el = document.getElementById(section);
         if (el) {
@@ -178,14 +177,20 @@ export default function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <a
-                href="/Акбар_Маманазаров_CV_.docx"
-                download
+              <button
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/Akbar_Mamanazarov_CV.docx";
+                  link.setAttribute("download", "Akbar_Mamanazarov_CV.docx");
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
                 className="hidden md:flex items-center gap-2 btn-outline text-sm !py-1.5 !px-3"
               >
                 <IoDownloadOutline className="w-4 h-4" />
                 <span>{t("downloadCv")}</span>
-              </a>
+              </button>
 
               <div className="hidden md:flex items-center gap-2">
                 <a
@@ -276,14 +281,21 @@ export default function Navbar() {
               </div>
 
               <div className="mt-8 pt-6 border-t border-white/[0.06]">
-                <a
-                  href="/Акбар_Маманазаров_CV_.docx"
-                  download
+                <button
+                  onClick={() => {
+                    const link = document.createElement("a");
+                    link.href = "/Akbar_Mamanazarov_CV.docx";
+                    link.setAttribute("download", "Akbar_Mamanazarov_CV.docx");
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    setIsOpen(false);
+                  }}
                   className="flex items-center justify-center gap-2 btn-primary text-sm w-full"
                 >
                   <IoDownloadOutline className="w-4 h-4" />
                   <span>{t("downloadCv")}</span>
-                </a>
+                </button>
               </div>
 
               <div className="flex items-center justify-center gap-3 mt-6">

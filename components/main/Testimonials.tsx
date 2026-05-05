@@ -18,7 +18,7 @@ const Testimonials = () => {
   const [current, setCurrent] = useState(0);
   const [isClient, setIsClient] = useState(false);
 
-  const items = [0, 1, 2].map((i) => ({
+  const items = [0, 1].map((i) => ({
     quote: t(`items.${i}.quote`),
     name: t(`items.${i}.name`),
     role: t(`items.${i}.role`),
