@@ -4,7 +4,7 @@
     "description": "Fullstack JavaScript/TypeScript dasturchi portfoliyosi — React, Node.js, Express.js"
   },
   "navbar": {
-    "brand": "AKBAR",
+    "brand": "AKBAR MAMANAZAROV",
     "links": {
       "home": "Bosh sahifa",
       "about": "Men haqimda",
@@ -39,10 +39,10 @@
     "bio": "Men zamonaviy, keng ko'lamli veb-ilovalar yaratishga ixtisoslashgan ishtiyoqli Fullstack JavaScript/TypeScript dasturchiman. React.js, Next.js, Node.js va Express.js bo'yicha tajribaga egaman — farq qiladigan raqamli yechimlar yarataman.\n\nMeni boshqalardan ajratib turadigan narsa — ChatGPT, Claude, Gemini va Copilot kabi AI vositalaridan rivojlanish jarayonini yaxshilash uchun foydalanish qobiliyati. Bu sifatni pasaytirmasdan tezkor natijalarga olib keladi. Men murakkab muammolarni yechishdan va yangi texnologiyalarni o'zlashtirishdan zavqlanaman.\n\nJamoa ishining kuchiga ishonaman — samarali aloqa qilaman, har qanday jamoa dinamikasiga oson moslashaman va har bir loyihaga ijobiy, hamkorlik kayfiyatini olib kelaman.",
     "tagline": "Kod, AI va Innovatsiyalar bilan kelajakni quraman",
     "stats": {
-      "experience": { "value": "3+", "label": "Yillik tajriba" },
-      "projects": { "value": "20+", "label": "Loyihalar bajarilgan" },
-      "technologies": { "value": "15+", "label": "Texnologiyalar" },
-      "clients": { "value": "10+", "label": "Mamnun mijozlar" }
+      "experience": { "value": "2+", "label": "Yillik tajriba" },
+      "projects": { "value": "15+", "label": "Loyihalar bajarilgan" },
+      "technologies": { "value": "10+", "label": "Texnologiyalar" },
+      "clients": { "value": "5+", "label": "Mamnun mijozlar" }
     }
   },
   "skills": {
@@ -99,9 +99,9 @@
         "tags": ["React", "Express.js", "MongoDB", "Socket.io"]
       },
       {
-        "title": "AI Chat Ilovasi",
-        "description": "OpenAI API asosida aqlli chat ilovasi — suhbat tarixi, bir nechta modellar va eksport funksiyasi.",
-        "tags": ["Next.js", "TypeScript", "OpenAI API", "Tailwind"]
+        "title": "Klinika Boshqaruv Tizimi",
+        "description": "React, TypeScript, Tailwind CSS va PostgreSQL yordamida yaratilgan kommunikativ klinika boshqaruv yechimi. Bemorlar bazasi, qabul jadvallari, to'lovlar va xodimlar boshqaruvi funksiyalariga ega.",
+        "tags": ["React", "TypeScript", "Tailwind CSS", "PostgreSQL"]
       },
       {
         "title": "Portfolio Sayti",
@@ -133,8 +133,8 @@
     ]
   },
   "contact": {
-    "heading": "Bog'lan",
-    "headingAccent": "ing",
+    "heading": "",
+    "headingAccent": "Bog'laning",
     "subtitle": "Loyihangiz bormi? Birga ishlaylik!",
     "form": {
       "name": "Ismingiz",
@@ -150,8 +150,8 @@
       "email": "Email",
       "location": "Manzil",
       "availability": "Frilans uchun mavjud",
-      "emailValue": "akbar@example.com",
-      "locationValue": "O'zbekiston"
+      "emailValue": "akbarnazarov109@gmail.com",
+      "locationValue": "Toshkent shahar Sergeli tumani 3-bekat"
     }
   },
   "footer": {

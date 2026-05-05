@@ -2,11 +2,11 @@ import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
-import "../globals.css";
 import dynamic from "next/dynamic";
-const StarsCanvas = dynamic(() => import("@/components/main/StarBackground"), { ssr: false });
-import Navbar from "@/components/main/Navbar";
-import Footer from "@/components/main/Footer";
+
+const StarsCanvas = dynamic(() => import("../../components/main/StarBackground"), { ssr: false });
+import Navbar from "../../components/main/Navbar";
+import Footer from "../../components/main/Footer";
 
 const locales = ["en", "ru", "uz"];
 
@@ -53,20 +53,18 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
-  const messages = (await import(`@/messages/${locale}.json`)).default;
+  const messages = (await import(`../../messages/${locale}.json`)).default;
 
   return (
-    <html lang={locale} className={inter.variable}>
-      <body className="font-sans bg-dark overflow-x-hidden max-w-[1920px] mx-auto">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <StarsCanvas />
-          <ScrollProgress />
-          <Navbar />
-          <main className="relative z-10">{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <div className="relative min-h-screen bg-dark">
+        <StarsCanvas />
+        <ScrollProgress />
+        <Navbar />
+        <main className="relative z-10">{children}</main>
+        <Footer />
+      </div>
+    </NextIntlClientProvider>
   );
 }
 

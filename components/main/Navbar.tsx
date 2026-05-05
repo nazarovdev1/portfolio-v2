@@ -110,9 +110,7 @@ export default function Navbar() {
               }}
               className="flex items-center gap-3 group"
             >
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-accent-indigo to-accent-blue flex items-center justify-center font-bold text-white text-sm group-hover:shadow-lg group-hover:shadow-accent-indigo/30 transition-shadow">
-                A
-              </div>
+            
               <span className="font-bold text-lg text-white hidden sm:block">
                 {t("brand")}
               </span>

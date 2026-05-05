@@ -39,10 +39,10 @@
     "bio": "I'm a passionate Fullstack JavaScript/TypeScript developer specializing in building modern, scalable web applications. With expertise in React.js, Next.js, Node.js, and Express.js, I create seamless digital experiences that make a difference.\n\nWhat sets me apart is my ability to leverage AI tools like ChatGPT and GitHub Copilot to enhance my development workflow, resulting in faster delivery without compromising quality. I'm a quick learner who thrives on solving complex problems and mastering new technologies.\n\nI believe in the power of teamwork — I communicate effectively, adapt easily to any team dynamic, and bring a positive, collaborative energy to every project. Whether it's building from scratch or improving existing systems, I'm always ready for the next challenge.",
     "tagline": "Building the Future with Code, AI & Innovation",
     "stats": {
-      "experience": { "value": "3+", "label": "Years Experience" },
-      "projects": { "value": "20+", "label": "Projects Completed" },
-      "technologies": { "value": "15+", "label": "Technologies" },
-      "clients": { "value": "10+", "label": "Happy Clients" }
+      "experience": { "value": "2+", "label": "Years Experience" },
+      "projects": { "value": "15+", "label": "Projects Completed" },
+      "technologies": { "value": "10+", "label": "Technologies" },
+      "clients": { "value": "5+", "label": "Happy Clients" }
     }
   },
   "skills": {
@@ -99,9 +99,9 @@
         "tags": ["React", "Express.js", "MongoDB", "Socket.io"]
       },
       {
-        "title": "AI Chat Application",
-        "description": "An intelligent chat application powered by OpenAI API with conversation history, multiple models support, and export functionality.",
-        "tags": ["Next.js", "TypeScript", "OpenAI API", "Tailwind"]
+        "title": "Clinic Management System",
+        "description": "A comprehensive clinic management solution built with React, TypeScript, Tailwind CSS, and PostgreSQL. Features patient records, appointment scheduling, billing, and staff management.",
+        "tags": ["React", "TypeScript", "Tailwind CSS", "PostgreSQL"]
       },
       {
         "title": "Portfolio Website",
@@ -150,8 +150,8 @@
       "email": "Email",
       "location": "Location",
       "availability": "Available for freelance",
-      "emailValue": "akbar@example.com",
-      "locationValue": "Uzbekistan"
+      "emailValue": "akbarnazarov109@gmail.com",
+      "locationValue": "Tashkent city, Sergeli district, 3-bekat"
     }
   },
   "footer": {

@@ -24,15 +24,15 @@ const Projects = () => {
 
     const imageByIndex = [
       "/luxx.png",
-      "/CardImage.png",
-      "/NextWebsite.png",
+      "/wareflow.png",
+      "/clinic.png",
       "/SpaceWebsite.png",
     ];
 
     const liveUrlByIndex = [
       "https://luxx.uz",
-      "#",
-      "#",
+      "https://ware-flow-pink.vercel.app/",
+      "https://medix-8b97ud9sn-akbarnazarov888-6282s-projects.vercel.app/",
       "#",
     ];
 

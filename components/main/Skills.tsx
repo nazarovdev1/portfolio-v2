@@ -189,7 +189,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section-padding relative">
+    <section id="skills" className="section-padding relative" suppressHydrationWarning>
       <div className="section-container">
         <InView triggerOnce threshold={0.1}>
           {({ inView, ref }) => (
@@ -233,7 +233,7 @@ const Skills = () => {
                           {cat.name.charAt(0)}
                         </span>
                       </div>
-                        <div className="min-w-0">
+<div className="min-w-0">
                           <h3 className="text-lg font-semibold text-white">
                             {cat.name}
                           </h3>
@@ -241,19 +241,19 @@ const Skills = () => {
                             {cat.skills.length} skills
                           </p>
                         </div>
-                      </div>
-                      <div className="hidden sm:flex items-center gap-1.5">
-                        <span className="text-[11px] text-white/45">
-                          avg
-                        </span>
-                        <span className="text-[11px] text-white/60 tabular-nums">
-                          {Math.round(
-                            cat.skills.reduce((sum, s) => sum + clampLevel(s.level), 0) /
-                              Math.max(1, cat.skills.length)
-                          )}
-                          %
-                        </span>
-                      </div>
+                       </div>
+                       <div className="hidden sm:flex items-center gap-1.5">
+                         <span className="text-[11px] text-white/45">
+                           avg
+                         </span>
+                         <span className="text-[11px] text-white/60 tabular-nums" suppressHydrationWarning>
+                           {Math.round(
+                             cat.skills.reduce((sum, s) => sum + clampLevel(s.level), 0) /
+                               Math.max(1, cat.skills.length)
+                           )}
+                           %
+                         </span>
+                       </div>
                     </div>
                     <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
                       {cat.skills.map((skill) => (

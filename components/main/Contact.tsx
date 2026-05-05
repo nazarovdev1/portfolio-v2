@@ -105,18 +105,18 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="text-sm text-gray-400">{info.label}</p>
-                        {info.href ? (
-                          <a
-                            href={info.href}
-                            className="text-white font-medium text-sm hover:text-accent-indigo transition-colors"
-                          >
-                            {info.value}
-                          </a>
-                        ) : (
-                          <p className="text-white font-medium text-sm">
-                            {info.label}
-                          </p>
-                        )}
+{info.href ? (
+                           <a
+                             href={info.href}
+                             className="text-white font-medium text-sm hover:text-accent-indigo transition-colors"
+                           >
+                             {info.value}
+                           </a>
+                         ) : (
+                           <p className="text-white font-medium text-sm">
+                             {info.value}
+                           </p>
+                         )}
                       </div>
                     </div>
                   ))}

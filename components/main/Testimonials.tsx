@@ -16,6 +16,7 @@ import { IoSendOutline } from "react-icons/io5";
 const Testimonials = () => {
   const t = useTranslations("testimonials");
   const [current, setCurrent] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
   const items = [0, 1, 2].map((i) => ({
     quote: t(`items.${i}.quote`),
@@ -32,9 +33,14 @@ const Testimonials = () => {
   }, [items.length]);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
     const timer = setInterval(next, 6000);
     return () => clearInterval(timer);
-  }, [next]);
+  }, [isClient, next]);
 
   return (
     <section className="section-padding relative">
