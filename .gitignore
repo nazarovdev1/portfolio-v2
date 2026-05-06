@@ -38,5 +38,3 @@ next-env.d.ts
 
 # misc
 app/luxx.png
-app/*.docx
-public/*.docx

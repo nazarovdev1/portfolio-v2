@@ -107,21 +107,14 @@ const HeroContent = () => {
               <HiOutlineCode className="w-4 h-4" />
               {t("cta.projects")}
             </a>
-            <button
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/Akbar_Mamanazarov_CV.docx";
-                link.setAttribute("download", "Akbar_Mamanazarov_CV.docx");
-                link.setAttribute("target", "_blank");
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
+            <a
+              href="/Akbar_Mamanazarov_CV.docx"
+              download="Akbar_Mamanazarov_CV.docx"
               className="btn-outline flex items-center gap-2 text-sm"
             >
               <IoDownloadOutline className="w-4 h-4" />
               {t("cta.cv")}
-            </button>
+            </a>
             <a
               href="#contact"
               onClick={(e) => {
