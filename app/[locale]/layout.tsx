@@ -14,10 +14,11 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-const inter = Inter({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-inter",
-});
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 const metadataMap: Record<string, { title: string; description: string }> = {
   en: {

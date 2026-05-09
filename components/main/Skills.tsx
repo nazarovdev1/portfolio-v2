@@ -104,73 +104,58 @@ function levelLabel(level: number) {
 }
 
 function SkillTile({
-  skill,
-  accent,
-}: {
-  skill: Skill;
-  accent: string;
-}) {
-  const level = clampLevel(skill.level);
-  const label = levelLabel(level);
+   skill,
+   accent,
+ }: {
+   skill: Skill;
+   accent: string;
+ }) {
+   const level = clampLevel(skill.level);
+   const label = levelLabel(level);
 
-  return (
-    <div
-      className="group relative rounded-2xl p-3 bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.14] focus-within:border-white/[0.18] transition-all duration-300 overflow-hidden outline-none"
-      title={`${skill.name} — ${label} (${level}%)`}
-      aria-label={`${skill.name}, ${label}, ${level}%`}
-      role="img"
-    >
-      <div className="absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-b from-white/[0.06] via-transparent to-transparent" />
-      <div className="absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-accent-indigo/10 via-accent-blue/10 to-transparent" />
+   return (
+     <div
+       className="group relative rounded-2xl p-3 sm:p-4 bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.14] transition-all duration-300 overflow-hidden outline-none"
+       title={`${skill.name} — ${label} (${level}%)`}
+       aria-label={`${skill.name}, ${label}, ${level}%`}
+       role="img"
+     >
+       <div className="absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-white/[0.08] via-transparent to-transparent" />
 
-      <div className="relative flex flex-col items-center text-center gap-2">
-        <div className="relative">
-          <div
-            className={`w-12 h-12 rounded-2xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-gray-300 transition-all duration-300 group-hover:text-white group-hover:scale-[1.03]`}
-          >
-            <span className="text-[18px]">
-              {iconMap[skill.icon] || <HiOutlineCube className="w-5 h-5" />}
-            </span>
-          </div>
-          <div
-            className={`pointer-events-none absolute -inset-2 rounded-[20px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md bg-gradient-to-r ${accent}`}
-            aria-hidden="true"
-          />
-        </div>
+       <div className="relative flex flex-col items-center text-center gap-3">
+         <div className="relative">
+           <div
+             className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-gray-300 transition-all duration-300 group-hover:text-white group-hover:scale-110"
+           >
+             <span className="text-xl sm:text-2xl">
+               {iconMap[skill.icon] || <HiOutlineCube className="w-5 h-5 sm:w-6 sm:h-6" />}
+             </span>
+           </div>
+           <div
+             className={`pointer-events-none absolute -inset-2 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md bg-gradient-to-r ${accent}`}
+             aria-hidden="true"
+           />
+         </div>
 
-        <span className="text-[11px] sm:text-[12px] leading-tight text-white/70 group-hover:text-white/85 transition-colors duration-200 line-clamp-2 min-h-[2.2em]">
-          {skill.name}
-        </span>
+         <div className="flex flex-col gap-1 w-full">
+           <span className="text-[11px] sm:text-xs font-bold text-white/80 group-hover:text-white transition-colors duration-200 truncate">
+             {skill.name}
+           </span>
+           <div className="flex items-center justify-center gap-1 opacity-60 group-hover:opacity-100 transition-opacity">
+             <span className="text-[9px] uppercase tracking-wider text-white/50">{label}</span>
+           </div>
+         </div>
 
         <div className="w-full pt-1">
           <div className="h-1 rounded-full bg-white/[0.06] overflow-hidden">
             <div
-              className={`h-full rounded-full bg-gradient-to-r ${accent}`}
+              className={`h-full rounded-full bg-gradient-to-r ${accent} transition-all duration-1000 ease-out`}
               style={{ width: `${level}%` }}
               role="progressbar"
               aria-valuenow={level}
               aria-valuemin={0}
               aria-valuemax={100}
             />
-          </div>
-          <div className="mt-1 flex items-center justify-between">
-            <span className="text-[10px] text-white/40">{label}</span>
-            <div className="flex items-center gap-1">
-              {Array.from({ length: 3 }).map((_, i) => {
-                const filled =
-                  (i === 0 && level >= 50) ||
-                  (i === 1 && level >= 70) ||
-                  (i === 2 && level >= 85);
-                return (
-                  <span
-                    key={i}
-                    className={`w-1.5 h-1.5 rounded-full ${
-                      filled ? "bg-white/55" : "bg-white/18"
-                    }`}
-                  />
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>
@@ -189,7 +174,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section-padding relative" suppressHydrationWarning>
+    <section id="skills" className="section-padding pt-24 sm:pt-32 relative" suppressHydrationWarning>
       <div className="section-container">
         <InView triggerOnce threshold={0.1}>
           {({ inView, ref }) => (
@@ -199,17 +184,17 @@ const Skills = () => {
               animate={inView ? "visible" : "hidden"}
               className="flex flex-col items-center"
             >
-              <motion.div variants={fadeInUp(0.1)} className="text-center mb-4">
+              <motion.div variants={fadeInUp(0.1)} className="text-center mb-2">
                 <h2 className="text-3xl md:text-4xl font-bold text-white">
                   {t("heading")}
                   <span className="gradient-text"> {t("headingAccent")}</span>
                 </h2>
-                <div className="w-20 h-1 bg-gradient-to-r from-accent-indigo to-accent-blue rounded-full mx-auto mt-4" />
+                <div className="w-20 h-1 bg-gradient-to-r from-accent-indigo to-accent-blue rounded-full mx-auto mt-3" />
               </motion.div>
 
               <motion.p
                 variants={fadeInUp(0.2)}
-                className="text-gray-400 text-sm md:text-base text-center mb-12 max-w-md"
+                className="text-gray-400 text-sm md:text-base text-center mb-8 max-w-md"
               >
                 {t("subtitle")}
               </motion.p>
@@ -219,11 +204,11 @@ const Skills = () => {
                 className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full"
               >
                 {categories.map((cat) => (
-                  <motion.div
-                    key={cat.key}
-                    variants={staggerItem}
-                    className={`glass-card p-6 transition-all duration-300 ${categoryBorders[cat.key] || ""}`}
-                  >
+<motion.div
+                         key={cat.key}
+                         variants={staggerItem}
+                         className={`glass-card p-4 sm:p-6 transition-all duration-300 ${categoryBorders[cat.key] || ""}`}
+                       >
                     <div className="flex items-center justify-between gap-3 mb-5">
                       <div className="flex items-center gap-3">
                       <div
@@ -255,15 +240,15 @@ const Skills = () => {
                          </span>
                        </div>
                     </div>
-                    <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
-                      {cat.skills.map((skill) => (
-                        <SkillTile
-                          key={skill.name}
-                          skill={skill}
-                          accent={categoryAccents[cat.key] || "from-accent-indigo/70 to-accent-blue/70"}
-                        />
-                      ))}
-                    </div>
+<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                       {cat.skills.map((skill) => (
+                         <SkillTile
+                           key={skill.name}
+                           skill={skill}
+                           accent={categoryAccents[cat.key] || "from-accent-indigo/70 to-accent-blue/70"}
+                         />
+                       ))}
+                     </div>
                   </motion.div>
                 ))}
               </motion.div>

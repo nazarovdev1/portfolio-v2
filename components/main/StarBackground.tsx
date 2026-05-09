@@ -8,9 +8,10 @@ import * as random from "maath/random/dist/maath-random.esm";
 
 const StarBackground = (props: any) => {
   const ref: any = useRef();
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 })
-  );
+  const [sphere] = useState(() => {
+    const count = typeof window !== 'undefined' && window.innerWidth < 768 ? 1200 : 5000;
+    return random.inSphere(new Float32Array(count), { radius: 1.2 });
+  });
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 15;
@@ -40,7 +41,12 @@ const StarBackground = (props: any) => {
 
 const StarsCanvas = () => (
   <div className="w-full h-auto fixed inset-0 z-[1] pointer-events-none">
-    <Canvas camera={{ position: [0, 0, 1] }} style={{ pointerEvents: 'none' }}>
+    <Canvas 
+      camera={{ position: [0, 0, 1] }} 
+      style={{ pointerEvents: 'none' }}
+      dpr={[1, 1.5]}
+      gl={{ preserveDrawingBuffer: true, antialias: false }}
+    >
       <Suspense fallback={null}>
         <StarBackground />
       </Suspense>

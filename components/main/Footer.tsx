@@ -29,20 +29,20 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/[0.06] bg-dark-100/50">
       <div className="section-container py-12">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+        <div className="flex flex-col items-center md:flex-row md:items-start md:justify-between gap-8">
           <div className="flex-1 text-center md:text-left max-w-sm">
             <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
               <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-accent-indigo to-accent-blue flex items-center justify-center font-bold text-white text-sm">
                 A
               </div>
-              <span className="font-bold text-lg text-white">AKBAR MAMANAZAROV</span>
+              <span className="font-bold text-base sm:text-lg text-white">AKBAR MAMANAZAROV</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
               {t("description")}
             </p>
             <div className="flex items-center gap-3 mt-4 justify-center md:justify-start">
               <a
-                href="https://t.me/nazarov_49"
+                href="https://github.com/nazarovdev1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/[0.04] flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent-indigo/20 transition-all"
@@ -72,7 +72,7 @@ export default function Footer() {
             <h4 className="font-semibold text-white text-sm mb-3">
               {t("quickLinks")}
             </h4>
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col gap-2 items-center md:items-start">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -109,10 +109,6 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/[0.06] mt-8 pt-6 text-center">
-          <p className="text-xs text-gray-500 flex items-center justify-center gap-1">
-            {t("copyright")} — Made with{" "}
-            <FaHeart className="w-3 h-3 text-red-400 inline" /> & AI
-          </p>
         </div>
       </div>
     </footer>

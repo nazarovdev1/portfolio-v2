@@ -39,6 +39,20 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [showLangMenu, setShowLangMenu] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    };
+  }, [isOpen]);
+
   const navLinks = [
     { href: "#home", label: t("links.home") },
     { href: "#skills", label: t("links.skills") },
@@ -221,7 +235,7 @@ export default function Navbar() {
 
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden w-9 h-9 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/[0.08] transition-all"
+                className="lg:hidden w-10 h-10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/[0.08] transition-all"
               >
                 {isOpen ? (
                   <HiX className="w-5 h-5" />
@@ -246,14 +260,14 @@ export default function Navbar() {
               className="absolute inset-0 bg-black/60 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute right-0 top-0 bottom-0 w-[280px] bg-dark-100 border-l border-white/[0.06] p-6"
-            >
-              <div className="flex flex-col gap-1 mt-16">
+<motion.div
+               initial={{ x: "100%" }}
+               animate={{ x: 0 }}
+               exit={{ x: "100%" }}
+               transition={{ type: "spring", damping: 30, stiffness: 200 }}
+               className="absolute right-0 top-0 bottom-0 w-[75vw] sm:w-[280px] bg-dark-100 border-l border-white/[0.06] p-6"
+             >
+              <div className="flex flex-col gap-2 mt-20">
                 {navLinks.map((link, i) => {
                   const sectionId = link.href.replace("#", "");
                   const isActive = activeSection === sectionId;
@@ -268,61 +282,51 @@ export default function Navbar() {
                         e.preventDefault();
                         handleNavClick(link.href);
                       }}
-                      className={`px-4 py-3 rounded-xl text-sm font-medium transition-all ${
+                      className={`flex items-center justify-between px-5 py-4 rounded-2xl text-base font-semibold transition-all ${
                         isActive
-                          ? "text-white bg-accent-indigo/20 border border-accent-indigo/30"
-                          : "text-gray-400 hover:text-white hover:bg-white/[0.06]"
+                          ? "text-white bg-accent-indigo/20 border border-accent-indigo/30 shadow-lg shadow-accent-indigo/10"
+                          : "text-gray-400 hover:text-white hover:bg-white/[0.04]"
                       }`}
                     >
-                      {link.label}
+                      <span>{link.label}</span>
+                      <span className={`text-[10px] uppercase tracking-widest opacity-40 ${isActive ? "opacity-100" : ""}`}>
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
                     </motion.a>
                   );
                 })}
               </div>
 
-              <div className="mt-8 pt-6 border-t border-white/[0.06]">
-                <button
-                  onClick={() => {
-                    const link = document.createElement("a");
-                    link.href = "/Akbar_Mamanazarov_CV.docx";
-                    link.setAttribute("download", "Akbar_Mamanazarov_CV.docx");
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    setIsOpen(false);
-                  }}
-                  className="flex items-center justify-center gap-2 btn-primary text-sm w-full"
-                >
-                  <IoDownloadOutline className="w-4 h-4" />
-                  <span>{t("downloadCv")}</span>
-                </button>
-              </div>
+              <div className="mt-auto pb-10 space-y-6">
+                <div className="pt-6 border-t border-white/[0.06]">
+                  <a
+                    href="/Akbar_Mamanazarov_CV.docx"
+                    download="Akbar_Mamanazarov_CV.docx"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-center gap-2 btn-primary py-4 text-sm w-full shadow-xl shadow-accent-indigo/20"
+                  >
+                    <IoDownloadOutline className="w-5 h-5" />
+                    <span className="font-bold uppercase tracking-wider">{t("downloadCv")}</span>
+                  </a>
+                </div>
 
-              <div className="flex items-center justify-center gap-3 mt-6">
-                <a
-                  href="https://github.com/nazarovdev1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/[0.08] transition-all"
-                >
-                  <FaGithub className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://linkedin.com/in/akbar-nazarov-1a39ab406"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/[0.08] transition-all"
-                >
-                  <FaLinkedinIn className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://t.me/nazarov_49"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/[0.08] transition-all"
-                >
-                  <FaTelegramPlane className="w-5 h-5" />
-                </a>
+                <div className="flex items-center justify-center gap-5">
+                  {[
+                    { icon: <FaGithub className="w-6 h-6" />, href: "https://github.com/nazarovdev1" },
+                    { icon: <FaLinkedinIn className="w-6 h-6" />, href: "https://linkedin.com/in/akbar-nazarov-1a39ab406" },
+                    { icon: <FaTelegramPlane className="w-6 h-6" />, href: "https://t.me/nazarov_49" }
+                  ].map((social, i) => (
+                    <a
+                      key={i}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/[0.08] transition-all"
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </motion.div>

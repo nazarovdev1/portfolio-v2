@@ -12,7 +12,6 @@ import { useTranslations } from "next-intl";
 import { InView } from "react-intersection-observer";
 import Image from "next/image";
 import {
-  HiOutlineBriefcase,
   HiOutlineCode,
   HiOutlineDeviceMobile,
   HiOutlineUserGroup,
@@ -55,7 +54,7 @@ const About = () => {
                   className="flex-shrink-0"
                 >
                   <div className="relative">
-                    <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-accent-indigo/30 p-1">
+                    <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full overflow-hidden border-2 sm:border-4 border-accent-indigo/30 p-1">
                       <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-accent-indigo/20 to-accent-blue/20">
                         <Image
                           src="/myPhoto.jpg"
@@ -66,8 +65,8 @@ const About = () => {
                         />
                       </div>
                     </div>
-                    <div className="absolute -bottom-2 -right-2 w-20 h-8 glass-strong rounded-lg flex items-center justify-center">
-                      <span className="text-xs font-mono font-medium text-accent-indigo">
+                    <div className="absolute -bottom-2 -right-2 w-16 h-7 sm:w-20 sm:h-8 glass-strong rounded-lg flex items-center justify-center">
+                      <span className="text-[10px] sm:text-xs font-mono font-medium text-accent-indigo">
                         &lt;/&gt;
                       </span>
                     </div>
@@ -76,7 +75,7 @@ const About = () => {
 
                 <motion.div
                   variants={slideInFromRight(0.3)}
-                  className="flex-1 space-y-4"
+                  className="flex-1 space-y-4 text-center lg:text-left"
                 >
                   {bio.map((paragraph, i) => (
                     <p
@@ -91,21 +90,21 @@ const About = () => {
 
               <motion.div
                 variants={staggerContainer}
-                className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-12 w-full"
+                className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-6 mt-12 w-full"
               >
                 {statKeys.map((key, i) => (
                   <motion.div
                     key={key}
                     variants={staggerItem}
-                    className="glass-card p-5 text-center"
+                    className={`glass-card p-4 sm:p-5 text-center ${i === 2 ? "col-span-2 sm:col-span-1" : ""}`}
                   >
-                    <div className="w-12 h-12 rounded-xl bg-accent-indigo/10 flex items-center justify-center text-accent-indigo mx-auto mb-3">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-accent-indigo/10 flex items-center justify-center text-accent-indigo mx-auto mb-3">
                       {statIcons[i]}
                     </div>
-                    <div className="text-2xl md:text-3xl font-bold text-white">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                       {t(`stats.${key}.value`)}
                     </div>
-                    <div className="text-xs md:text-sm text-gray-400 mt-1">
+                    <div className="text-[10px] sm:text-xs md:text-sm text-gray-400 mt-1 uppercase tracking-wider font-medium">
                       {t(`stats.${key}.label`)}
                     </div>
                   </motion.div>

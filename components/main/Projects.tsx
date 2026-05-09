@@ -87,90 +87,79 @@ const Projects = () => {
 
               <motion.div
                 variants={fadeInUp(0.3)}
-                className="flex flex-wrap gap-2 mb-10"
+                className="w-full overflow-x-auto scrollbar-hidden pb-4 mb-6"
               >
-                {allTags.map((tag) => (
-                  <button
-                    key={tag}
-                    onClick={() => setFilter(tag)}
-                    className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
-                      filter === tag
-                        ? "bg-accent-indigo/20 text-white border border-accent-indigo/40"
-                        : "text-gray-400 border border-white/[0.08] hover:text-white hover:border-white/20 bg-white/[0.02]"
-                    }`}
-                  >
-                    {tag}
-                  </button>
-                ))}
+                <div className="flex flex-nowrap sm:flex-wrap gap-2 justify-start sm:justify-center min-w-max sm:min-w-0 px-4">
+                  {allTags.map((tag) => (
+                    <button
+                      key={tag}
+                      onClick={() => setFilter(tag)}
+                      className={`px-5 py-2 rounded-full text-xs font-semibold transition-all duration-300 whitespace-nowrap ${
+                        filter === tag
+                          ? "bg-accent-indigo text-white shadow-lg shadow-accent-indigo/25 border border-accent-indigo"
+                          : "text-gray-400 border border-white/[0.08] hover:text-white hover:bg-white/[0.05] bg-white/[0.02]"
+                      }`}
+                    >
+                      {tag}
+                    </button>
+                  ))}
+                </div>
               </motion.div>
 
               <motion.div
                 variants={staggerContainer}
-                className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full"
+                className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 w-full"
               >
                 {filtered.map((project, i) => (
                   <motion.div
                     key={`${project.index}-${project.title}`}
                     variants={staggerItem}
-                    className="glass-card overflow-hidden group cursor-pointer"
-                    onClick={() => {
-                      if (project.liveUrl && project.liveUrl !== "#") {
-                        window.open(project.liveUrl, "_blank", "noopener,noreferrer");
-                      }
-                    }}
+                    className="glass-card overflow-hidden group flex flex-col h-full"
                   >
-                    <div className="relative h-48 overflow-hidden bg-dark-200">
+                    <div className="relative aspect-video overflow-hidden bg-dark-200">
                       <Image
                         src={project.image}
                         alt={project.title}
                         width={600}
                         height={400}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-60" />
-                      {/* Hover overlay with Visit Site button */}
-                      {project.liveUrl && project.liveUrl !== "#" && (
-                        <div className="absolute inset-0 bg-dark/70 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                          <span className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-accent-indigo to-accent-blue text-white text-sm font-semibold flex items-center gap-2 shadow-lg shadow-accent-indigo/25 hover:shadow-accent-indigo/40 transition-shadow duration-300">
-                            <HiOutlineExternalLink className="w-4 h-4" />
-                            Visit Site →
-                          </span>
-                        </div>
-                      )}
-                      {/* Top-right icon links */}
-                      <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent opacity-80" />
+                      
+                      {/* Mobile-friendly action buttons */}
+                      <div className="absolute bottom-4 right-4 flex gap-2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 translate-y-0 lg:translate-y-2 lg:group-hover:translate-y-0">
                         <a
                           href={project.liveUrl || "#"}
                           target={project.liveUrl && project.liveUrl !== "#" ? "_blank" : undefined}
                           rel={project.liveUrl && project.liveUrl !== "#" ? "noopener noreferrer" : undefined}
-                          className="w-8 h-8 rounded-lg glass-strong flex items-center justify-center text-white hover:bg-accent-indigo/30 transition-colors"
+                          className="w-10 h-10 rounded-xl glass-strong flex items-center justify-center text-white hover:bg-accent-indigo transition-colors shadow-lg"
                           onClick={(e) => e.stopPropagation()}
                         >
-                          <HiOutlineExternalLink className="w-4 h-4" />
+                          <HiOutlineExternalLink className="w-5 h-5" />
                         </a>
                         <a
                           href={project.codeUrl || "#"}
                           target={project.codeUrl && project.codeUrl !== "#" ? "_blank" : undefined}
                           rel={project.codeUrl && project.codeUrl !== "#" ? "noopener noreferrer" : undefined}
-                          className="w-8 h-8 rounded-lg glass-strong flex items-center justify-center text-white hover:bg-accent-indigo/30 transition-colors"
+                          className="w-10 h-10 rounded-xl glass-strong flex items-center justify-center text-white hover:bg-accent-indigo transition-colors shadow-lg"
                           onClick={(e) => e.stopPropagation()}
                         >
-                          <HiOutlineCode className="w-4 h-4" />
+                          <HiOutlineCode className="w-5 h-5" />
                         </a>
                       </div>
                     </div>
-                    <div className="p-5">
-                      <h3 className="text-lg font-semibold text-white mb-2">
+                    <div className="p-6 flex-1 flex flex-col">
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-accent-indigo transition-colors">
                         {project.title}
                       </h3>
-                      <p className="text-sm text-gray-400 leading-relaxed mb-4">
+                      <p className="text-sm text-gray-400 leading-relaxed mb-6 line-clamp-3">
                         {project.description}
                       </p>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 mt-auto">
                         {project.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-2.5 py-1 rounded-md text-[11px] font-medium bg-accent-indigo/10 text-accent-indigo/80 border border-accent-indigo/10"
+                            className="px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-white/[0.03] text-gray-400 border border-white/[0.05]"
                           >
                             {tag}
                           </span>

@@ -10,6 +10,9 @@
 
   body {
     @apply bg-dark antialiased;
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 
   ::selection {
@@ -78,11 +81,27 @@
   }
 
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full;
+    @apply max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full;
   }
 
   .section-padding {
-    @apply py-20 md:py-28;
+    @apply py-12 sm:py-16 md:py-24 lg:py-28;
+  }
+}
+
+@media (hover: hover) {
+  .glass-card:hover {
+    @apply border-accent-indigo/30;
+    box-shadow:
+      0 8px 40px rgba(99, 102, 241, 0.15),
+      inset 0 0 30px rgba(99, 102, 241, 0.08);
+    transform: translateY(-2px);
+  }
+}
+
+@media (hover: none) {
+  .glass-card {
+    transition: none;
   }
 }
 
@@ -93,6 +112,16 @@
 
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 ::-webkit-scrollbar-track {

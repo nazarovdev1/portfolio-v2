@@ -93,35 +93,35 @@ const Contact = () => {
                 {t("subtitle")}
               </motion.p>
 
-              <div className="flex flex-col lg:flex-row gap-8 w-full max-w-5xl">
+<div className="flex flex-col lg:flex-row gap-8 w-full max-w-5xl">
                 <motion.div
                   variants={slideInFromLeft(0.3)}
                   className="flex-1 space-y-6"
                 >
                   {contactInfo.map((info, i) => (
-                    <div key={i} className="glass-card p-5 flex items-start gap-4">
+                    <div key={i} className="glass-card p-4 sm:p-5 flex items-start gap-4">
                       <div className="w-10 h-10 rounded-xl bg-accent-indigo/10 flex items-center justify-center text-accent-indigo flex-shrink-0">
                         {info.icon}
                       </div>
                       <div>
                         <p className="text-sm text-gray-400">{info.label}</p>
 {info.href ? (
-                           <a
-                             href={info.href}
-                             className="text-white font-medium text-sm hover:text-accent-indigo transition-colors"
-                           >
-                             {info.value}
-                           </a>
-                         ) : (
-                           <p className="text-white font-medium text-sm">
-                             {info.value}
-                           </p>
-                         )}
+                            <a
+                              href={info.href}
+                              className="text-white font-medium text-sm hover:text-accent-indigo transition-colors"
+                            >
+                              {info.value}
+                            </a>
+                          ) : (
+                            <p className="text-white font-medium text-sm">
+                              {info.value}
+                            </p>
+                          )}
                       </div>
                     </div>
                   ))}
 
-                  <div className="glass-card p-5">
+                  <div className="glass-card p-4 sm:p-5">
                     <p className="text-sm text-gray-400 mb-4">Social</p>
                     <div className="flex gap-3">
                       {socials.map((s, i) => (
@@ -146,7 +146,7 @@ const Contact = () => {
                 >
                   <form
                     onSubmit={handleSubmit}
-                    className="glass-card p-6 space-y-4"
+                    className="glass-card p-4 sm:p-6 space-y-4"
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
@@ -159,7 +159,7 @@ const Contact = () => {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-sm placeholder-gray-500 focus:outline-none focus:border-accent-indigo/40 focus:bg-white/[0.06] transition-all"
+                          className="w-full px-4 py-3 min-h-[44px] rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-sm placeholder-gray-500 focus:outline-none focus:border-accent-indigo/40 focus:bg-white/[0.06] transition-all"
                           placeholder="John"
                         />
                       </div>
@@ -173,7 +173,7 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-sm placeholder-gray-500 focus:outline-none focus:border-accent-indigo/40 focus:bg-white/[0.06] transition-all"
+                          className="w-full px-4 py-3 min-h-[44px] rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-sm placeholder-gray-500 focus:outline-none focus:border-accent-indigo/40 focus:bg-white/[0.06] transition-all"
                           placeholder="john@example.com"
                         />
                       </div>
@@ -188,7 +188,7 @@ const Contact = () => {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-sm placeholder-gray-500 focus:outline-none focus:border-accent-indigo/40 focus:bg-white/[0.06] transition-all"
+                        className="w-full px-4 py-3 min-h-[44px] rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-sm placeholder-gray-500 focus:outline-none focus:border-accent-indigo/40 focus:bg-white/[0.06] transition-all"
                         placeholder="Project inquiry"
                       />
                     </div>
@@ -209,7 +209,7 @@ const Contact = () => {
                     <button
                       type="submit"
                       disabled={status === "sending"}
-                      className="btn-primary w-full flex items-center justify-center gap-2 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="btn-primary w-full flex items-center justify-center gap-2 text-sm disabled:opacity-50 disabled:cursor-not-allowed py-3.5 sm:py-3"
                     >
                       {status === "sending" ? (
                         <>

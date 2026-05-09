@@ -11,14 +11,17 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen" id="home">
+    <section className="relative w-full min-h-screen flex flex-col" id="home">
       {isClient && (
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute md:top-[-240px] lg:top-[-335px] top-[-400px] left-0 z-0 w-full h-full object-cover opacity-70"
+          preload="metadata"
+          width={768}
+          height={432}
+          className="absolute top-[-250px] md:top-[-200px] left-0 z-0 w-full h-full object-cover opacity-40 mix-blend-screen"
         >
           <source src="/blackhole.webm" type="video/webm" />
         </video>

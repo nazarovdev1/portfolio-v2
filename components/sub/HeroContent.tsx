@@ -28,181 +28,160 @@ const HeroContent = () => {
     { text: t("badges.2"), icon: <HiOutlineLightningBolt className="w-4 h-4" /> },
   ];
 
-  const highlights = [
-    0, 1, 2, 3,
-  ].map((i) => t(`highlights.${i}`));
+  const highlights = [0, 1, 2, 3].map((i) => t(`highlights.${i}`));
 
   return (
-    <div className="relative z-10 h-full flex items-center">
-      <div className="section-container h-full flex md:flex-row flex-col-reverse items-center justify-center gap-8 md:gap-12 pt-20 md:pt-0">
+    <div className="relative z-10 min-h-screen flex items-center justify-center pt-28 pb-20 md:py-0 overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent-indigo/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent-blue/10 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="section-container relative flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
+        
+        {/* Profile Image Section - Modern Floating Look */}
+        <motion.div
+          variants={slideInFromRight(0.4)}
+          initial="hidden"
+          animate="visible"
+          className="relative flex-shrink-0 order-1 md:order-2"
+        >
+          <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 group">
+            {/* Outer Glow Rings */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-indigo via-accent-blue to-accent-cyan opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-700 animate-pulse" />
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-accent-indigo via-accent-blue to-accent-cyan opacity-30 blur-md group-hover:opacity-50 transition-opacity duration-700" />
+            
+            {/* Main Circle */}
+            <div className="relative w-full h-full rounded-full border-2 border-white/10 bg-dark-200 overflow-hidden backdrop-blur-sm flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent z-10 pointer-events-none" />
+              <div className="text-6xl sm:text-7xl lg:text-8xl font-black gradient-text tracking-tighter select-none animate-float">
+                AM
+              </div>
+            </div>
+
+            {/* Floating Badges - Only visible on sm+ */}
+            <div className="absolute -top-4 -right-4 hidden sm:flex w-14 h-14 rounded-2xl glass-strong items-center justify-center shadow-2xl shadow-accent-indigo/20 border-accent-indigo/30 animate-float" style={{ animationDelay: "1s" }}>
+              <HiOutlineCode className="w-6 h-6 text-accent-indigo" />
+            </div>
+            <div className="absolute -bottom-4 -left-4 hidden sm:flex w-12 h-12 rounded-2xl glass-strong items-center justify-center shadow-2xl shadow-accent-blue/20 border-accent-blue/30 animate-float" style={{ animationDelay: "2s" }}>
+              <HiOutlineLightningBolt className="w-5 h-5 text-accent-blue" />
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Content Section */}
         <motion.div
           initial="hidden"
           animate="visible"
-          className="flex-1 flex flex-col gap-5 max-w-2xl"
+          className="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-6 max-w-2xl order-2 md:order-1"
         >
+          {/* Top Status Badge */}
           <motion.div
             variants={fadeInUp(0.2)}
-            className="flex flex-wrap gap-2 md:gap-3"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-indigo/10 border border-accent-indigo/20 text-accent-indigo text-xs font-bold tracking-widest uppercase"
           >
-            {badges.map((badge, i) => (
-              <motion.div
-                key={i}
-                variants={fadeInUp(0.3 + i * 0.1)}
-                className="glass flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 text-accent-indigo text-xs md:text-sm font-medium"
-              >
-                {badge.icon}
-                <span className="text-white/90">{badge.text}</span>
-              </motion.div>
-            ))}
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-indigo opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-indigo"></span>
+            </span>
+            {t("greeting")}
           </motion.div>
 
-          <motion.div
-            variants={slideInFromLeft(0.4)}
-            className="flex flex-col gap-2"
-          >
-            <span className="text-gray-400 text-sm md:text-base font-medium">
-              {t("greeting")}
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          {/* Main Title */}
+          <div className="flex flex-col gap-2 w-full">
+            <motion.h1 
+              variants={slideInFromLeft(0.4)}
+              className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight"
+            >
               {t("name")}
-              <span className="block gradient-text mt-1">
+              <span className="block gradient-text mt-2 pb-2">
                 {t("title")}
               </span>
-            </h1>
-          </motion.div>
+            </motion.h1>
+          </div>
 
+          {/* Description */}
           <motion.p
             variants={slideInFromLeft(0.6)}
-            className="text-gray-400 text-sm md:text-base leading-relaxed max-w-xl"
+            className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl"
           >
             {t("description")}
           </motion.p>
 
-          <motion.ul
-            variants={fadeInUp(0.8)}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300"
-          >
+          {/* Highlights - New Interactive Grid */}
+          <motion.div
+             variants={fadeInUp(0.8)}
+             className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2"
+           >
             {highlights.map((item, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <span className="text-accent-indigo mt-0.5">&#9656;</span>
-                <span>{item}</span>
-              </li>
+              <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.04] transition-all group">
+                <div className="w-8 h-8 rounded-lg bg-accent-indigo/10 flex items-center justify-center text-accent-indigo group-hover:scale-110 transition-transform">
+                   <HiOutlineSparkles className="w-4 h-4" />
+                </div>
+                <span className="text-xs sm:text-sm text-gray-300 font-medium group-hover:text-white transition-colors">{item}</span>
+              </div>
             ))}
-          </motion.ul>
+          </motion.div>
 
+          {/* Buttons Section - More Premium */}
           <motion.div
             variants={fadeInUp(1)}
-            className="flex flex-wrap gap-3 mt-2"
+            className="grid grid-cols-2 sm:flex sm:flex-wrap gap-4 mt-6 w-full"
           >
             <a
               href="#projects"
               onClick={(e) => {
                 e.preventDefault();
-                document
-                  .querySelector("#projects")
-                  ?.scrollIntoView({ behavior: "smooth" });
+                document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="btn-primary flex items-center gap-2 text-sm"
+              className="btn-primary group flex items-center justify-center gap-2 text-sm sm:text-base py-4 sm:px-8"
             >
-              <HiOutlineCode className="w-4 h-4" />
-              {t("cta.projects")}
+              <HiOutlineCode className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+              <span>{t("cta.projects")}</span>
             </a>
             <a
               href="/Akbar_Mamanazarov_CV.docx"
               download="Akbar_Mamanazarov_CV.docx"
-              className="btn-outline flex items-center gap-2 text-sm"
+              className="btn-outline group flex items-center justify-center gap-2 text-sm sm:text-base py-4 sm:px-8"
             >
-              <IoDownloadOutline className="w-4 h-4" />
-              {t("cta.cv")}
+              <IoDownloadOutline className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
+              <span>{t("cta.cv")}</span>
             </a>
             <a
               href="#contact"
               onClick={(e) => {
                 e.preventDefault();
-                document
-                  .querySelector("#contact")
-                  ?.scrollIntoView({ behavior: "smooth" });
+                document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="btn-outline flex items-center gap-2 text-sm"
+              className="btn-outline group flex items-center justify-center gap-2 text-sm sm:text-base py-4 sm:px-8 col-span-2 sm:col-span-1"
             >
-              <IoMailOutline className="w-4 h-4" />
-              {t("cta.contact")}
+              <IoMailOutline className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <span>{t("cta.contact")}</span>
             </a>
           </motion.div>
 
+          {/* Social Links */}
           <motion.div
             variants={fadeInUp(1.2)}
-            className="flex items-center gap-4 mt-2"
+            className="flex items-center gap-5 mt-4"
           >
             {[
-              {
-                icon: <FaGithub className="w-5 h-5" />,
-                href: "https://github.com/nazarovdev1",
-              },
-              {
-                icon: <FaLinkedinIn className="w-5 h-5" />,
-                href: "https://linkedin.com/in/akbar-nazarov-1a39ab406",
-              },
-              {
-                icon: <FaTelegramPlane className="w-5 h-5" />,
-                href: "https://t.me/nazarov_49",
-              },
+              { icon: <FaGithub />, href: "https://github.com/nazarovdev1" },
+              { icon: <FaLinkedinIn />, href: "https://linkedin.com/in/akbar-nazarov-1a39ab406" },
+              { icon: <FaTelegramPlane />, href: "https://t.me/nazarov_49" },
             ].map((social, i) => (
               <a
                 key={i}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-white hover:border-accent-indigo/40 transition-all duration-300"
+                className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent-indigo/20 hover:border-accent-indigo/40 transition-all duration-300 text-xl shadow-lg"
               >
                 {social.icon}
               </a>
             ))}
           </motion.div>
         </motion.div>
-
-        <motion.div
-          variants={slideInFromRight(0.6)}
-          initial="hidden"
-          animate="visible"
-          className="flex-1 flex justify-center items-center relative"
-        >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent-indigo/20 to-accent-blue/20 blur-3xl" />
-            <div className="absolute inset-0 rounded-full border border-accent-indigo/20 animate-pulse-glow" />
-            <div className="absolute inset-4 rounded-full border border-accent-blue/10" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-7xl md:text-8xl lg:text-9xl font-black gradient-text animate-float select-none">
-                AM
-              </div>
-            </div>
-            <div className="absolute -top-4 -right-4 w-16 h-16 rounded-xl glass flex items-center justify-center">
-              <HiOutlineCode className="w-7 h-7 text-accent-indigo" />
-            </div>
-            <div className="absolute -bottom-4 -left-4 w-14 h-14 rounded-xl glass flex items-center justify-center">
-              <HiOutlineLightningBolt className="w-6 h-6 text-accent-blue" />
-            </div>
-            <div className="absolute top-1/2 -right-8 w-12 h-12 rounded-xl glass flex items-center justify-center">
-              <HiOutlineSparkles className="w-5 h-5 text-accent-cyan" />
-            </div>
-          </div>
-        </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-      >
-        <div className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-1.5">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1.5 h-1.5 rounded-full bg-accent-indigo"
-          />
-        </div>
-      </motion.div>
     </div>
   );
 };
